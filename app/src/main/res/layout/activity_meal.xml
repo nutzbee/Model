@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Meal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="700dp"
+            android:layout_height="600dp"
+            android:src="@drawable/food_bg"
+            android:translationY="-100dp"
+            android:translationX="-150dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:id="@+id/linear"
+
+        >
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/food_bank"
+        android:layout_gravity="center"
+        android:id="@+id/img"
+        android:background="@drawable/img_bg"
+        android:backgroundTint="#80003507"
+        />
+
+        <TextView
+            android:id="@+id/mealtv"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_gravity="center"
+            android:background="@drawable/meal_bg"
+            android:backgroundTint="#80002305"
+            android:text="Meal Module"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="50dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/linear"
+        android:background="@drawable/reco_bg"
+        android:backgroundTint="#8000610D"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recommendations"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textAlignment="center"/>
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mtabl"
+            android:background="@drawable/tablayout"
+            android:backgroundTint="#8029FF46"
+            app:tabTextColor="#000000"
+            app:tabSelectedTextColor="#FF0000"
+            app:tabIndicatorColor="#8EFF5E"
+            app:tabTextAppearance="@style/TabTxt"
+            >
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We recommend"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We also recommend"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mvp"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
